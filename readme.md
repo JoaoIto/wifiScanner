@@ -24,6 +24,16 @@ MongoDB em um servidor Debian Linux 12.5+.
 
 ---
 
+## Documentação [github](https://github.com/JoaoIto/wifiScanner)
+
+## Install
+
+```cmd
+npm i wifiscanner-ts
+```
+
+Link do npm: [npm](https://www.npmjs.com/package/wifiscanner-ts)
+
 ### Descrição dos Comandos
 
 Os comandos permitem interagir diretamente com as rotas do servidor através do terminal. Eles foram criados para facilitar o uso das funcionalidades expostas pelas rotas HTTP, simulando requisições sem precisar usar um cliente externo como Postman ou inspecionar manualmente as rotas pelo navegador.
