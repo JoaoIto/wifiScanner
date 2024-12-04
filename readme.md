@@ -24,6 +24,68 @@ MongoDB em um servidor Debian Linux 12.5+.
 
 ---
 
+### Descrição dos Comandos
+
+Os comandos permitem interagir diretamente com as rotas do servidor através do terminal. Eles foram criados para facilitar o uso das funcionalidades expostas pelas rotas HTTP, simulando requisições sem precisar usar um cliente externo como Postman ou inspecionar manualmente as rotas pelo navegador.
+
+Os comandos fazem requisições às rotas utilizando o módulo `axios` e permitem passar parâmetros para personalizar o comportamento das chamadas. Isso é útil para automatizar tarefas, testar funcionalidades ou integrar os serviços diretamente em um fluxo de trabalho de desenvolvimento.
+
+---
+
+### Lista de Comandos
+
+#### **1. `npm run networks`**
+- **Descrição**: Faz uma requisição à rota **GET `/networks`** para iniciar a varredura de redes Wi-Fi usando a interface padrão configurada no servidor.
+- **Como Funciona**:
+  - Executa o arquivo `src/cli/networks.js`, que faz a requisição e exibe o resultado no terminal.
+- **Exemplo**:
+  ```bash
+  npm run networks
+  ```
+
+---
+
+#### **2. `npm run save-networks`**
+- **Descrição**: Faz uma requisição à rota **POST `/save-networks`** para salvar as redes Wi-Fi encontradas utilizando a interface padrão.
+- **Como Funciona**:
+  - Executa o arquivo `src/cli/save-networks.js`, que chama a API do servidor para iniciar o processo de escaneamento e salvamento.
+- **Exemplo**:
+  ```bash
+  npm run save-networks
+  ```
+
+---
+
+#### **3. `npm run save-networks:iface -- <iface>`**
+- **Descrição**: Faz uma requisição à rota **POST `/save-networks/:iface`**, permitindo especificar uma interface Wi-Fi personalizada (exemplo: `wlan0`, `eth1`).
+- **Como Funciona**:
+  - Executa o arquivo `src/cli/save-networks-iface.js`, passando a interface como parâmetro.
+  - O parâmetro deve ser informado após o comando, precedido por `--`.
+- **Exemplo**:
+  ```bash
+  npm run save-networks:iface -- wlan0
+  ```
+
+---
+
+### Como Rodar as Rotas
+
+1. **Iniciar o Servidor**:
+   Certifique-se de que o servidor esteja rodando antes de executar os comandos:
+   ```bash
+   npm start
+   ```
+
+2. **Executar os Comandos**:
+   - Escolha o comando que corresponde à rota desejada e rode no terminal.
+   - Para comandos que aceitam parâmetros, passe o valor esperado depois de `--`.
+
+3. **Ver os Resultados**:
+   - Os resultados das requisições serão exibidos diretamente no terminal.
+   - Em caso de erro, mensagens detalhadas serão exibidas para ajudar no diagnóstico.
+
+---
+
 ## **1. Rota: `/save-networks`**
 
 ### **Método:** `POST`
