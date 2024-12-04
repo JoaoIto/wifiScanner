@@ -38,7 +38,49 @@ app.post('/save-networks', (req, res) => {
                     message: 'Networks scanning and saving initiated',
                     totalScanned: networks.length,
                     initialSavedCount: savedNetworks.length,
-                    status: 'Continuous scanning started'
+                    status: 'Continuous scanning started',
+                    networks: savedNetworks
+                });
+            })
+            .catch(saveError => {
+                console.error('Error saving networks:', saveError);
+                res.status(500).json({
+                    error: 'Failed to initiate network scanning',
+                    details: saveError.message
+                });
+            });
+    });
+});
+
+// Rota para iniciar a varredura de redes com uma interface personalizada
+app.post('/save-networks/:iface', (req, res) => {
+    const iface = req.params.iface; // Pega a interface passada como parâmetro
+
+    if (!iface) {
+        return res.status(400).json({
+            error: 'Interface not provided'
+        });
+    }
+
+    wifi.init({ iface: iface });
+
+    wifi.scan((error, networks) => {
+        if (error) {
+            console.error('WiFi Scan Error:', error);
+            return res.status(500).json({
+                error: 'Failed to scan networks',
+                details: error.message
+            });
+        }
+
+        startContinuousNetworkScanning(networks)
+            .then(savedNetworks => {
+                res.status(200).json({
+                    message: 'Networks scanning and saving initiated',
+                    totalScanned: networks.length,
+                    initialSavedCount: savedNetworks.length,
+                    status: 'Continuous scanning started',
+                    networks: savedNetworks
                 });
             })
             .catch(saveError => {
