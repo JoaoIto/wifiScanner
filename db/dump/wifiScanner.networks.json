@@ -1,0 +1,330 @@
+[{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38a"
+  },
+  "ssid": "Pedro",
+  "bssid": "08:c7:f5:2d:f9:eb",
+  "channel": 2,
+  "signalLevel": -69,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.791Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38b"
+  },
+  "ssid": "Fabio_5G",
+  "bssid": "80:86:44:18:27:f3",
+  "channel": 5,
+  "signalLevel": -89,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.791Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38c"
+  },
+  "ssid": "Ap905",
+  "bssid": "c4:eb:ff:8a:e2:50",
+  "channel": 2,
+  "signalLevel": -80,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38d"
+  },
+  "ssid": "Olimpo",
+  "bssid": "94:ea:ea:87:ee:5a",
+  "channel": 5,
+  "signalLevel": -89,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38e"
+  },
+  "ssid": "Olimp",
+  "bssid": "86:ea:ea:87:ee:5a",
+  "channel": 5,
+  "signalLevel": -85.5,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac38f"
+  },
+  "ssid": "Ap 1005_5G",
+  "bssid": "80:86:44:13:1a:9b",
+  "channel": 5,
+  "signalLevel": -73.5,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac390"
+  },
+  "ssid": "NETPRIME__JOAO POVOA 5G",
+  "bssid": "34:fc:a1:a2:4f:3b",
+  "channel": 5,
+  "signalLevel": -50.5,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac391"
+  },
+  "ssid": "PropzFilmes-5G",
+  "bssid": "10:72:23:45:38:f9",
+  "channel": 5,
+  "signalLevel": -78.5,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac392"
+  },
+  "ssid": "AP VIVO",
+  "bssid": "68:d4:0c:a5:24:df",
+  "channel": 2,
+  "signalLevel": -77,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac393"
+  },
+  "ssid": "JV",
+  "bssid": "6c:d7:19:0d:6a:10",
+  "channel": 2,
+  "signalLevel": -87,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac394"
+  },
+  "ssid": "PropzFilmes-2,4G",
+  "bssid": "10:72:23:45:38:ec",
+  "channel": 2,
+  "signalLevel": -61,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac395"
+  },
+  "ssid": "NETPRIME GRUPO  DIAMOND",
+  "bssid": "22:08:89:99:97:70",
+  "channel": 2,
+  "signalLevel": -82.5,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac396"
+  },
+  "ssid": "IANARA",
+  "bssid": "54:9f:06:20:c2:99",
+  "channel": 2,
+  "signalLevel": -77,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac397"
+  },
+  "ssid": "Fabio",
+  "bssid": "80:86:44:18:27:ef",
+  "channel": 2,
+  "signalLevel": -78.5,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac398"
+  },
+  "ssid": "VTECH_5887_aa62",
+  "bssid": "a6:97:5c:0e:aa:62",
+  "channel": 2,
+  "signalLevel": -58,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac399"
+  },
+  "ssid": "Vivo Fibra",
+  "bssid": "68:d4:0c:a4:bb:3f",
+  "channel": 2,
+  "signalLevel": -70,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39a"
+  },
+  "ssid": "Unknown",
+  "bssid": "56:9f:06:40:c2:99",
+  "channel": 2,
+  "signalLevel": -75,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39b"
+  },
+  "ssid": "NETPRIME  VICTOR 5G",
+  "bssid": "22:08:89:99:9b:f8",
+  "channel": 5,
+  "signalLevel": -88,
+  "security": "WPA2-Personal",
+  "frequency": 2432,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39c"
+  },
+  "ssid": "AP JV",
+  "bssid": "2c:70:4f:51:54:6f",
+  "channel": 2,
+  "signalLevel": -81,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39d"
+  },
+  "ssid": "NETPRIME  VICTOR",
+  "bssid": "22:08:89:99:9b:f6",
+  "channel": 2,
+  "signalLevel": -69,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39e"
+  },
+  "ssid": "Ap 1005",
+  "bssid": "80:86:44:13:1a:97",
+  "channel": 2,
+  "signalLevel": -61,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "674fca157d9ea3728d3ac39f"
+  },
+  "ssid": "NETPRIME_JOAO POVOA 2-4",
+  "bssid": "34:fc:a1:a2:4f:3c",
+  "channel": 2,
+  "signalLevel": -50.5,
+  "security": "WPA2-Personal",
+  "frequency": 2417,
+  "collectedAt": {
+    "$date": "2024-12-04T03:18:45.795Z"
+  },
+  "__v": 0
+}]
