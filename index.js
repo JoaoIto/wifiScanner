@@ -1,10 +1,8 @@
 import express from 'express';
 const app = express();
 import wifi from 'node-wifi'
-import schedule from 'node-schedule'
-import Sequelize from 'sequelize'
 import * as bodyParser from "express";
-import {saveNetworks, scanNetworksPeriodically, startContinuousNetworkScanning} from "./services/wifi/index.js";
+import {scanNetworksPeriodically, startContinuousNetworkScanning} from "./services/wifi/index.js";
 const port = 3000;
 
 // Utilizar o middleware para analisar o corpo da requisição
@@ -118,13 +116,4 @@ app.get('/networks', (req, res) => {
 
     console.log(`Iniciando varredura na interface padrão: ${ifaceWifi}`);
     scanNetworksPeriodically(ifaceWifi, res); // Chama a função de verificação contínua
-});
-
-// Iniciar o servidor
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
-});
-app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
 });
