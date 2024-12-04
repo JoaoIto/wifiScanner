@@ -4,7 +4,7 @@ import wifi from 'node-wifi'
 import schedule from 'node-schedule'
 import Sequelize from 'sequelize'
 import * as bodyParser from "express";
-import {saveNetworks, startContinuousNetworkScanning} from "./services/wifi/index.js";
+import {saveNetworks, scanNetworksPeriodically, startContinuousNetworkScanning} from "./services/wifi/index.js";
 const port = 3000;
 
 // Utilizar o middleware para analisar o corpo da requisição
@@ -93,6 +93,7 @@ app.post('/save-networks/:iface', (req, res) => {
     });
 });
 
+// Rota POST para iniciar a varredura na interface especificada
 app.post('/networks-myapp', (req, res) => {
     const { iface } = req.body;
 
@@ -104,52 +105,26 @@ app.post('/networks-myapp', (req, res) => {
 
         console.log(`Iniciando varredura na interface: ${iface}`);
 
-        wifi.init({ iface });
-
-        wifi.scan((error, networks) => {
-            if (error) {
-                console.error('Erro ao varrer redes:', error);
-                res.status(500).json({ error: 'Erro ao varrer redes' });
-            } else {
-                console.log('Varredura concluída com sucesso\n');
-                console.log({
-                    iface,
-                    networks
-                });
-
-                res.json({
-                    iface,
-                    networks
-                });
-            }
-        });
+        scanNetworksPeriodically(iface, res); // Chama a função de verificação contínua
     } catch (error) {
         console.error('Erro inesperado:', error);
         res.status(500).json({ error: 'Erro interno do servidor' });
     }
 });
 
+// Rota GET para varrer a rede na interface padrão
 app.get('/networks', (req, res) => {
-    const ifaceWifi = { iface: 'Adaptador de Rede sem Fio Conexão Local* 1' };
-    // LVarrer a rede e retornar os resultados em JSON
-    wifi.scan((error, networks) => {
-        if (error) {
-            res.status(500).json({ error: 'Erro ao varrer redes' });
-        } else {
-            console.log('Varredura concluída com sucesso\n');
-            console.log({
-                ifaceWifi,
-                networks
-            });
+    const ifaceWifi = 'Adaptador de Rede sem Fio Conexão Local* 1'; // Interface padrão
 
-            res.json({
-                ifaceWifi,
-                networks
-            });
-        }
-    });
+    console.log(`Iniciando varredura na interface padrão: ${ifaceWifi}`);
+    scanNetworksPeriodically(ifaceWifi, res); // Chama a função de verificação contínua
 });
 
+// Iniciar o servidor
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
