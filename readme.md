@@ -41,7 +41,8 @@ Esta rota é responsável por iniciar o processo de varredura das redes Wi-Fi e 
     "message": "Networks scanning and saving initiated",
     "totalScanned": Número total de redes encontradas,
     "initialSavedCount": Número de redes inicialmente salvas,
-    "status": "Continuous scanning started"
+    "status": "Continuous scanning started",
+    "networks": "Networks salvar no período analisado!"
   }
   ```
 - **Status 500:** Quando ocorre um erro na varredura ou ao iniciar o processo de salvamento das redes.
@@ -54,7 +55,39 @@ Esta rota é responsável por iniciar o processo de varredura das redes Wi-Fi e 
 
 ---
 
-## **2. Banco de Dados - Modelo de Rede Wi-Fi**
+## **2. Rota: `/save-networks/:iface`**
+
+### **Método:** `POST`
+
+Esta rota além de salvar as networks, também pode receber uma iface por parâmetro, sendo padronizada e passada pelo usuário.
+Assim podendo rodar a partir de ifaces diferentes.
+
+#### **Requisição:**
+- **Parâmetros:** :iface.
+- **Body:** Não é necessário enviar um corpo na requisição.
+
+#### **Resposta:**
+- **Status 200:** Quando a varredura e o salvamento das redes são iniciados com sucesso.
+  ```json
+  {
+    "message": "Networks scanning and saving initiated",
+    "totalScanned": Número total de redes encontradas,
+    "initialSavedCount": Número de redes inicialmente salvas,
+    "status": "Continuous scanning started",
+    "networks": "Networks salvar no período analisado!"
+  }
+  ```
+- **Status 500:** Quando ocorre um erro na varredura ou ao iniciar o processo de salvamento das redes.
+  ```json
+  {
+    "error": "Failed to scan networks",
+    "details": "Detalhes do erro"
+  }
+  ```
+
+---
+
+## **3. Banco de Dados - Modelo de Rede Wi-Fi**
 
 As redes Wi-Fi são armazenadas no MongoDB usando o modelo `Network`, que é uma coleção de documentos contendo as seguintes propriedades:
 
