@@ -2,6 +2,40 @@ import wifi from "node-wifi";
 import schedule from "node-schedule";
 import {Network} from "../../db/newtwork.js";
 
+
+// Função para verificar redes Wi-Fi periodicamente
+export const scanNetworksPeriodically = (iface, res) => {
+    wifi.init({ iface });
+
+    const scanLoop = () => {
+        wifi.scan((error, networks) => {
+            if (error) {
+                console.error('Erro ao varrer redes:', error);
+                res.status(500).json({ error: 'Erro ao varrer redes' });
+            } else {
+                console.log(`Varredura na interface ${iface} concluída com sucesso.\n`);
+
+                // Preparar dados da resposta
+                const response = {
+                    message: "Networks scanning and saving initiated",
+                    totalScanned: networks.length,  // Total de redes encontradas
+                    status: "Continuous scanning started",  // Status da varredura contínua
+                    iface,
+                    networks  // Redes encontradas
+                };
+
+                // Enviar a resposta com as informações adicionais
+                res.json(response);
+
+                // Continuar verificando a cada 1 minuto (60000ms)
+                setTimeout(scanLoop, 60000);
+            }
+        });
+    };
+
+    scanLoop();
+};
+
 // Função para varrer as redes e salvar no banco de dados
 
 // Prepare network data for saving
@@ -113,4 +147,6 @@ export const startContinuousNetworkScanning = (networks) => {
         // Start the initial save process
         saveNetworksWithDelay();
     });
+
+
 };
