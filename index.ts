@@ -3,8 +3,11 @@ const app = express();
 import wifi from 'node-wifi'
 import * as bodyParser from "express";
 import {scanNetworksPeriodically, startContinuousNetworkScanning} from "./services/wifi/index.js";
-const port = 3000;
 
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
 // Utilizar o middleware para analisar o corpo da requisição
 app.use(bodyParser.json());
 
